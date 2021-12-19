@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&display=swap");
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --blue-light: hsl(223, 100%, 88%);
+  --Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Blue-dark: hsl(209, 33%, 12%);
+}
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* main================================================================= */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* font-size: 5rem; */
+  min-height: 100vh;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1.5rem 3rem;
+}
+.header {
+  position: relative;
+}
+.header .h-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  /* flex-direction:column;; */
+}
+
+.h-logo img {
+  object-fit: cover;
+}
+
+.h-title {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.h-title h1 {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  /* opacity: 0.5; */
+}
+
+.h-title strong {
+  /* font-size: 5rem; */
+  /* opacity: 8; */
+  color: rgba(0, 0, 0, 1);
+}
+
+.h-title p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.h-search {
+  width: 120%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.5rem;
+}
+
+.h-search input {
+  border: 1px solid hsl(0, 0%, 59%, 0.5);
+  padding: 0.8rem;
+  border-radius: 100px;
+  width: 70%;
+}
+
+.h-search input::placeholder {
+  opacity: 0.5;
+}
+
+.h-search button {
+  margin-left: 0.5rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 100px;
+  border: none;
+  background: var(--Blue);
+  color: white;
+}
+
+.h-search button:hover {
+  background: hsl(223, 96%, 44%);
+}
+
+.h-search span {
+  position: absolute;
+  left: 15px;
+  top: 100%;
+  font-size: 0.8rem;
+  color: red;
+  opacity: 0;
+}
+
+/* foot=============================================== */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+.main .m-img {
+  padding: 3rem 0;
+}
+
+.m-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.m-icon a {
+  font-size: 1.5rem;
+  margin: 0 0.3rem;
+  color: var(--Gray);
+  padding: 0.5rem;
+  border-radius: 200px;
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+.m-icon a:nth-of-type(1):hover {
+  color: var(--Blue);
+}
+.m-icon a:nth-of-type(2):hover {
+  color: blue;
+}
+.m-icon a:nth-of-type(3):hover {
+  color: purple;
+}
+
+.m-rights {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 510px) {
+  .h-title {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .h-search input {
+    border: 1px solid hsl(0, 0%, 59%, 0.5);
+    padding: 0.8rem;
+    border-radius: 100px;
+    width: 100%;
+  }
+
+  .h-search button {
+    margin-left: 0rem;
+    margin-top: 1rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 100px;
+    border: none;
+    width: 100%;
+    background: var(--Blue);
+    color: white;
+  }
+
+  .h-search.active button {
+    margin-top: 3rem;
+  }
+
+  .h-search span {
+    position: absolute;
+    /* left: 50%; */
+    /* position: absolute; */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    font-size: 0.8rem;
+    color: red;
+    opacity: 0;
+    /* margin-bottom: 2rem; */
+  }
+}
